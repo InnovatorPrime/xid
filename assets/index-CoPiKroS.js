@@ -40,7 +40,7 @@ var n,l$1,t$1,i$1,r$1,o$1,e$1,f$2,c$1,s$1,a$1,p$1={},v$1=[],y$1=/acit|ex(?:s|g|n
 
 var f$1=0;function u$1(e,t,n,o,i,u){t||(t={});var a,c,p=t;if("ref"in p)for(c in p={},t)"ref"==c?a=t[c]:p[c]=t[c];var l={type:e,props:p,key:n,ref:a,__k:null,__:null,__b:0,__e:null,__c:null,constructor:void 0,__v:--f$1,__i:-1,__u:0,__source:i,__self:u};if("function"==typeof e&&(a=e.defaultProps))for(c in a) void 0===p[c]&&(p[c]=a[c]);return l$1.vnode&&l$1.vnode(l),l}
 
-const scriptRel = 'modulepreload';const assetsURL = function(dep) { return "/idcard/"+dep };const seen = {};const __vitePreload = function preload(baseModule, deps, importerUrl) {
+const scriptRel = 'modulepreload';const assetsURL = function(dep) { return "/xid/"+dep };const seen = {};const __vitePreload = function preload(baseModule, deps, importerUrl) {
   let promise = Promise.resolve();
   if (true               && deps && deps.length > 0) {
     let allSettled2 = function(promises) {
@@ -129,7 +129,7 @@ const Generatefront = ({ nameStr, nationStr, addrStr, idStr, headImgUrl }) => {
     const dd = id.slice(12, 14);
     return dd.startsWith("0") ? dd[1] : dd;
   };
-  const baseURL = "/idcard/";
+  const baseURL = "/xid/";
   y(() => {
     if (headImgUrl) {
       setHeadImageSrc(headImgUrl);
@@ -196,7 +196,7 @@ const Generatefront = ({ nameStr, nationStr, addrStr, idStr, headImgUrl }) => {
   y(() => {
     const el = document.querySelector(".generate-text-address span");
     if (el) {
-      el.style.backgroundImage = `url("${"/idcard/"}font_noise.webp")`;
+      el.style.backgroundImage = `url("${"/xid/"}font_noise.webp")`;
     }
   }, [addrStr]);
   y(() => {
@@ -267,7 +267,7 @@ const Generatefront = ({ nameStr, nationStr, addrStr, idStr, headImgUrl }) => {
   return /* @__PURE__ */ u$1("div", { children: /* @__PURE__ */ u$1("div", { className: "generate-list-wrapper", children: [
     /* @__PURE__ */ u$1("div", { className: "generator-list", children: [
       /* @__PURE__ */ u$1("div", { className: "generate-text-name", children: /* @__PURE__ */ u$1("p", { style: {
-        backgroundImage: `url("${"/idcard/"}font_noise.webp")`,
+        backgroundImage: `url("${"/xid/"}font_noise.webp")`,
         letterSpacing: nameStr.length === 2 ? "80px" : "2px"
       }, children: nameStr }) }),
       /* @__PURE__ */ u$1("div", { className: "generate-text-gender", children: [
@@ -275,13 +275,13 @@ const Generatefront = ({ nameStr, nationStr, addrStr, idStr, headImgUrl }) => {
           "p",
           {
             style: {
-              backgroundImage: `url("${"/idcard/"}font_noise.webp")`
+              backgroundImage: `url("${"/xid/"}font_noise.webp")`
             },
             children: getGenderFromID(idStr)
           }
         ),
         /* @__PURE__ */ u$1("p", { style: {
-          backgroundImage: `url("${"/idcard/"}font_noise.webp")`
+          backgroundImage: `url("${"/xid/"}font_noise.webp")`
         }, children: nationStr })
       ] }),
       /* @__PURE__ */ u$1("div", { className: "generate-text-born", children: [
@@ -289,7 +289,7 @@ const Generatefront = ({ nameStr, nationStr, addrStr, idStr, headImgUrl }) => {
           "p",
           {
             style: {
-              backgroundImage: `url("${"/idcard/"}font_noise.webp")`
+              backgroundImage: `url("${"/xid/"}font_noise.webp")`
             },
             children: getBirthYear(idStr)
           }
@@ -298,7 +298,7 @@ const Generatefront = ({ nameStr, nationStr, addrStr, idStr, headImgUrl }) => {
           "p",
           {
             style: {
-              backgroundImage: `url("${"/idcard/"}font_noise.webp")`
+              backgroundImage: `url("${"/xid/"}font_noise.webp")`
             },
             children: getBirthMonth(idStr)
           }
@@ -307,7 +307,7 @@ const Generatefront = ({ nameStr, nationStr, addrStr, idStr, headImgUrl }) => {
           "p",
           {
             style: {
-              backgroundImage: `url("${"/idcard/"}font_noise.webp")`
+              backgroundImage: `url("${"/xid/"}font_noise.webp")`
             },
             children: getBirthDay(idStr)
           }
@@ -322,7 +322,7 @@ const Generatefront = ({ nameStr, nationStr, addrStr, idStr, headImgUrl }) => {
             "p",
             {
               style: {
-                backgroundImage: `url("${"/idcard/"}font_noise.webp")`
+                backgroundImage: `url("${"/xid/"}font_noise.webp")`
               },
               children: idStr
             }
@@ -347,7 +347,7 @@ const Generatefront = ({ nameStr, nationStr, addrStr, idStr, headImgUrl }) => {
       {
         className: "generate-bg-img",
         style: {
-          backgroundImage: `url("${"/idcard/"}id_img_front.webp")`
+          backgroundImage: `url("${"/xid/"}id_img_front.webp")`
         }
       }
     )
@@ -366,7 +366,7 @@ const Generateback = ({ issueStr, startDate, endDate }) => {
         {
           className: "generate-text-office",
           children: /* @__PURE__ */ u$1("p", { style: {
-            backgroundImage: `url("${"/idcard/"}font_noise.webp")`
+            backgroundImage: `url("${"/xid/"}font_noise.webp")`
           }, children: issueStr })
         }
       ),
@@ -376,7 +376,7 @@ const Generateback = ({ issueStr, startDate, endDate }) => {
           {
             className: "generate-text-period-p",
             style: {
-              backgroundImage: `url("${"/idcard/"}font_noise.webp")`
+              backgroundImage: `url("${"/xid/"}font_noise.webp")`
             },
             children: formatDate(startDate)
           }
@@ -386,7 +386,7 @@ const Generateback = ({ issueStr, startDate, endDate }) => {
           {
             className: "generate-text-period-hyphen",
             style: {
-              backgroundImage: `url("${"/idcard/"}font_noise.webp")`
+              backgroundImage: `url("${"/xid/"}font_noise.webp")`
             },
             children: "-"
           }
@@ -396,7 +396,7 @@ const Generateback = ({ issueStr, startDate, endDate }) => {
           {
             className: formatDate(endDate) === "长期" ? "generate-text-period-p-long" : "generate-text-period-p",
             style: {
-              backgroundImage: `url("${"/idcard/"}font_noise.webp")`
+              backgroundImage: `url("${"/xid/"}font_noise.webp")`
             },
             children: formatDate(endDate)
           }
@@ -408,7 +408,7 @@ const Generateback = ({ issueStr, startDate, endDate }) => {
       {
         className: "generate-bg-img-back",
         style: {
-          backgroundImage: `url("${"/idcard/"}id_img_back.webp")`
+          backgroundImage: `url("${"/xid/"}id_img_back.webp")`
         }
       }
     )
@@ -1301,7 +1301,7 @@ const countValidHanzi = (text) => Array.from(text).filter(isValidHanzi).length;
 const isValidID = (val) => /^[0-9]{17}[0-9Xx]$/.test(val);
 const App = () => {
   const loadFontsAndImages = () => {
-    const baseURL = "/idcard/";
+    const baseURL = "/xid/";
     const buildFontURL = (file) => `${baseURL.replace(/\/$/, "")}/${file}`;
     const buildImgURL = (file) => `${baseURL.replace(/\/$/, "")}/${file}`;
     const fontCSS = `
@@ -1438,7 +1438,7 @@ const App = () => {
     /* @__PURE__ */ u$1("img", { id: "head-src", style: "display: none;", alt: "" }),
     showPopup && /* @__PURE__ */ u$1("div", { className: "input-popup-overlay", onClick: () => setShowPopup(false), children: /* @__PURE__ */ u$1("div", { className: "input-popup", onClick: (e) => e.stopPropagation(), children: [
       /* @__PURE__ */ u$1("h2", { className: "input-popup-title", children: "裁剪/五官位置参考" }),
-      /* @__PURE__ */ u$1("img", { className: "input-popup-image", src: `${"/idcard/"}id_img_head_woman.webp`, alt: "" }),
+      /* @__PURE__ */ u$1("img", { className: "input-popup-image", src: `${"/xid/"}id_img_head_woman.webp`, alt: "" }),
       /* @__PURE__ */ u$1("p", { className: "input-popup-text", children: "建议使用 400*500 透明背景PNG格式" }),
       /* @__PURE__ */ u$1("button", { className: "button", onClick: () => handleUploadClick(), children: /* @__PURE__ */ u$1("p", { children: "上传" }) })
     ] }) }),
@@ -1643,7 +1643,7 @@ const App = () => {
         "p",
         {
           className: "input-box-button",
-          onClick: () => window.open("https://github.com/faketrump2028/idcard", "_blank"),
+          onClick: () => window.open("https://github.com/faketrump2028/xid", "_blank"),
           children: " Github "
         }
       )
