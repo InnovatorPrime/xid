@@ -1643,7 +1643,7 @@ const App = () => {
         "p",
         {
           className: "input-box-button",
-          onClick: () => window.open("https://github.com/faketrump2028/xid", "_blank"),
+          onClick: () => window.open("https://github.com/", "_blank"),
           children: " Github "
         }
       )
